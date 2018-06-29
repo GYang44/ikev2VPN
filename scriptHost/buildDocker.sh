@@ -1,3 +1,3 @@
-#!bin/bash
+#!/bin/bash
 
-sudo docker build -t gyang44:VPN ./
+docker build -t gyang44:VPN ./
