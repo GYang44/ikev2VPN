@@ -7,18 +7,16 @@ EXPOSE 500/udp
 EXPOSE 4500/udp
 
 #update internal packages
-RUN apk update
-RUN apk upgrade 
-
 #install strongswan
-RUN apk --update add strongswan
+RUN apk -U upgrade \
+    && apk add -U --no-cache util-linux strongswan bash \
+    && rm -rf /var/cache/apk/* \
+    && rm -f /etc/ipsec.secrets
 
 #install certificates
-#COPY /etc/letsencrypt/archive/www.guojunyang.net/chain1.pem /etc/ipsec.d/certs/chain.pem
-#COPY /etc/letsencrypt/live/www.guojunyang.net/fullchain.pem /etc/ipsec.d/cacerts/
-#COPY /etc/letsencrypt/live/www.guojunyang.net/privkey.pem /etc/ipsec.d/private/
+COPY ./certs/chain.pem /etc/ipsec.d/cacerts/
+COPY ./certs/fullchain.pem /etc/ipsec.d/certs/
+COPY ./certs/privkey.pem /etc/ipsec.d/private/
 COPY ./strongSwanConfigure/ipsec.conf /etc/ipsec.conf
 COPY ./strongSwanConfigure/ipsec.secrets /etc/ipsec.secrets
-
-RUN echo finished building docker
 
