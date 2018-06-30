@@ -45,7 +45,7 @@ This is the project automate the process of creating, configuring and deploying 
     ```
 - Allow udp through port 4500 and 500 on your server.
 
-## Know Issue
+## Known Issue
 - May not work on your windows 10 machine, with recent(as of 2018) windows 10 update, this **ipesc.conf** no longer work with windows. "policy match error" will be raised upon connection.
 
 ## TODO
