@@ -9,7 +9,7 @@ EXPOSE 4500/udp
 #update internal packages
 #install strongswan
 RUN apk -U upgrade \
-    && apk add -U --no-cache util-linux strongswan bash \
+    && apk add -U --no-cache strongswan bash \
     && rm -rf /var/cache/apk/* \
     && rm -f /etc/ipsec.secrets
 
@@ -21,5 +21,5 @@ COPY ./strongSwanConfigure/ipsec.conf /etc/ipsec.conf
 COPY ./strongSwanConfigure/ipsec.secrets /etc/ipsec.secrets
 COPY ./scriptDocker/startVPN.sh /usr/bin/
 #start the server
-#CMD /bin/bash /usr/bin/startVPN.sh
+CMD /bin/bash /usr/bin/startVPN.sh
 
