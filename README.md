@@ -45,13 +45,14 @@ This is the project automate the process of creating, configuring and deploying 
     ```
 - Allow udp through port 4500 and 500 on your server.
 
-## Known Issue
-- May not work on your windows 10 machine, with recent(as of 2018) windows 10 update, this **ipesc.conf** no longer work with windows. "policy match error" will be raised upon connection.
+### 5. Always on Mobileconfig
+- Modify corresponding value in mobileconfig file to allow your ios device connect to vpn all the time.
+
+## Known Issues
+- When using ios devices, server will not be authenticated using RSA key.
 
 ## TODO
 - Create an Docker that can be initialized differently with different hosts.
-- Compatible with most recent version of windows
-- Allow ios login using configuration file.
 
 ## Acknowledgments
 This project won't be possible without insperation from following projects:
