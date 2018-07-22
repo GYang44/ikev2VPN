@@ -13,12 +13,6 @@ RUN apk -U upgrade \
     && rm -rf /var/cache/apk/* \
     && rm -f /etc/ipsec.secrets
 
-#install certificates
-COPY ./certs/chain.pem /etc/ipsec.d/cacerts/
-COPY ./certs/fullchain.pem /etc/ipsec.d/certs/
-COPY ./certs/privkey.pem /etc/ipsec.d/private/
-COPY ./strongSwanConfigure/ipsec.conf /etc/ipsec.conf
-COPY ./strongSwanConfigure/ipsec.secrets /etc/ipsec.secrets
 COPY ./scriptDocker/startVPN.sh /usr/bin/
 #start the server
 CMD /bin/bash /usr/bin/startVPN.sh
