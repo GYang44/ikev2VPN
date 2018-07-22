@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>PayloadDisplayName</key>
+	<string>GYangVPN</string>
+	<key>PayloadIdentifier</key>
+	<string>www.guojunyang.net</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>E3E88038-6627-4344-8EBE-5B437F9FB318</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
 	<key>PayloadContent</key>
 	<array>
 		<dict>
@@ -99,17 +111,5 @@
 			<string>IKEv2</string>
 		</dict>
 	</array>
-	<key>PayloadDisplayName</key>
-	<string>Untitled</string>
-	<key>PayloadIdentifier</key>
-	<string>Guojuns-MacBook-Pro.3248024D-7290-4D57-94C4-0ADAED5287BD</string>
-	<key>PayloadRemovalDisallowed</key>
-	<false/>
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadUUID</key>
-	<string>E3E88038-6627-4344-8EBE-5B437F9FB318</string>
-	<key>PayloadVersion</key>
-	<integer>1</integer>
 </dict>
 </plist>
